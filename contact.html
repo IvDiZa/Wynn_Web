@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web evolution · era logos - Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="theme-body" class="contact-nav">
+    <!-- navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+        <span class="nav-brand"><i class="fas fa-code-branch" aria-hidden="true"></i> web•eras</span>
+        <a href="index.html" data-page="home" class="nav-item" id="nav-home"><i class="fas fa-home" aria-hidden="true"></i> Home</a>
+        <a href="about.html" data-page="about" class="nav-item" id="nav-about"><i class="fas fa-info-circle" aria-hidden="true"></i> About</a>
+        <a href="web1.html" data-page="web1" class="nav-item" id="nav-web1"><i class="fas fa-folder-open" aria-hidden="true"></i> Web 1.0</a>
+        <a href="web2.html" data-page="web2" class="nav-item" id="nav-web2"><i class="fas fa-share-alt" aria-hidden="true"></i> Web 2.0</a>
+        <a href="web3.html" data-page="web3" class="nav-item" id="nav-web3"><i class="fas fa-cube" aria-hidden="true"></i> Web 3.0</a>
+        <a href="references.html" data-page="references" class="nav-item" id="nav-references"><i class="fas fa-book-open" aria-hidden="true"></i> References</a>
+        <a href="contact.html" data-page="contact" class="nav-item nav-active" id="nav-contact" aria-current="page"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a>
+    </nav>
+
+    <main class="page-wrapper page-contact" id="main-content">
+        <h1><i class="fas fa-envelope" aria-hidden="true"></i> Contact & Feedback</h1>
+        
+        <!-- Skip link for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        
+        <div class="contact-container">
+            <div class="contact-intro">
+                <p><strong>We'd love to hear from you!</strong> Which web era interests you most? Share your thoughts, questions, or feedback about the evolution of the web.</p>
+            </div>
+            
+            <div class="form-container">
+                <form id="feedbackForm" class="feedback-form" action="#" method="post" novalidate>
+                    <fieldset>
+                        <legend><i class="fas fa-user" aria-hidden="true"></i> Personal Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                            <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your full name">
+                            <div class="error-message" id="nameError" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" required aria-required="true" placeholder="your.email@example.com">
+                            <div class="error-message" id="emailError" aria-live="polite"></div>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend><i class="fas fa-comment" aria-hidden="true"></i> Your Feedback</legend>
+                        
+                        <div class="form-group">
+                            <label for="era">Which web era interests you most? <span aria-hidden="true">*</span></label>
+                            <select id="era" name="era" required aria-required="true">
+                                <option value="" disabled selected>-- Please select an era --</option>
+                                <option value="web1">Web 1.0 (Static, read-only)</option>
+                                <option value="web2">Web 2.0 (Social, interactive)</option>
+                                <option value="web3">Web 3.0 (Decentralized, blockchain)</option>
+                                <option value="agentic">Agentic Web (AI agents)</option>
+                                <option value="all">All eras equally</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="topic">Topic of interest (optional)</label>
+                            <input type="text" id="topic" name="topic" placeholder="e.g., Blockchain, Semantic Web, AI">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your message or feedback <span aria-hidden="true">*</span></label>
+                            <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Tell us what you think about the evolution of the web..."></textarea>
+                            <div class="error-message" id="messageError" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter for web evolution updates</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <fieldset class="rating-group">
+                                <legend>How would you rate this website? <span aria-hidden="true">*</span></legend>
+                                <div class="rating-options">
+                                    <div class="rating-option">
+                                        <input type="radio" id="rating5" name="rating" value="5" required>
+                                        <label for="rating5">5 - Excellent</label>
+                                    </div>
+                                    <div class="rating-option">
+                                        <input type="radio" id="rating4" name="rating" value="4">
+                                        <label for="rating4">4 - Good</label>
+                                    </div>
+                                    <div class="rating-option">
+                                        <input type="radio" id="rating3" name="rating" value="3">
+                                        <label for="rating3">3 - Average</label>
+                                    </div>
+                                    <div class="rating-option">
+                                        <input type="radio" id="rating2" name="rating" value="2">
+                                        <label for="rating2">2 - Fair</label>
+                                    </div>
+                                    <div class="rating-option">
+                                        <input type="radio" id="rating1" name="rating" value="1">
+                                        <label for="rating1">1 - Poor</label>
+                                    </div>
+                                </div>
+                                <div class="error-message" id="ratingError" aria-live="polite"></div>
+                            </fieldset>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="referral">How did you hear about us?</label>
+                            <select id="referral" name="referral">
+                                <option value="" disabled selected>-- Please select --</option>
+                                <option value="search">Search Engine</option>
+                                <option value="social">Social Media</option>
+                                <option value="friend">Friend/Colleague</option>
+                                <option value="class">University Class</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn" id="submitBtn">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i> Submit Feedback
+                            </button>
+                            <button type="reset" class="reset-btn">
+                                <i class="fas fa-undo" aria-hidden="true"></i> Reset Form
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+                
+                <div class="form-success" id="formSuccess" style="display: none;">
+                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                    <h3>Thank you for your feedback!</h3>
+                    <p>We appreciate you taking the time to share your thoughts about web evolution.</p>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3><i class="fas fa-info-circle" aria-hidden="true"></i> Other Ways to Connect</h3>
+                <ul class="contact-details">
+                    <li><i class="fas fa-envelope" aria-hidden="true"></i> Email: web.evolution@example.com</li>
+                    <li><i class="fab fa-twitter" aria-hidden="true"></i> Twitter: @webEras</li>
+                    <li><i class="fab fa-github" aria-hidden="true"></i> GitHub: /web-evolution</li>
+                </ul>
+                
+                <div class="accessibility-note">
+                    <h4><i class="fas fa-universal-access" aria-hidden="true"></i> Accessibility Statement</h4>
+                    <p>This form is designed to be fully accessible. If you experience any issues, please email us directly.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            <span><i class="fas fa-microchip" aria-hidden="true"></i> future: agentic commerce</span>
+            <span><i class="fas fa-universal-access" aria-hidden="true"></i> WCAG 2.1 AA compliant</span>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
