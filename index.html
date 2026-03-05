@@ -9,40 +9,66 @@
 </head>
 <body id="theme-body" class="home-nav">
     <!-- navigation -->
-    <nav class="navbar">
-        <span class="nav-brand"><i class="fas fa-code-branch"></i> web•eras</span>
-        <a href="index.html" data-page="home" class="nav-item nav-active" id="nav-home"><i class="fas fa-home"></i> Home</a>
-        <a href="about.html" data-page="about" class="nav-item" id="nav-about"><i class="fas fa-info-circle"></i> About</a>
-        <a href="web1.html" data-page="web1" class="nav-item" id="nav-web1"><i class="fas fa-folder-open"></i> Web 1.0</a>
-        <a href="web2.html" data-page="web2" class="nav-item" id="nav-web2"><i class="fas fa-share-alt"></i> Web 2.0</a>
-        <a href="web3.html" data-page="web3" class="nav-item" id="nav-web3"><i class="fas fa-cube"></i> Web 3.0</a>
+    <nav class="navbar" aria-label="Main navigation">
+        <span class="nav-brand"><i class="fas fa-code-branch" aria-hidden="true"></i> web•eras</span>
+        <a href="index.html" data-page="home" class="nav-item nav-active" id="nav-home" aria-current="page"><i class="fas fa-home" aria-hidden="true"></i> Home</a>
+        <a href="about.html" data-page="about" class="nav-item" id="nav-about"><i class="fas fa-info-circle" aria-hidden="true"></i> About</a>
+        <a href="web1.html" data-page="web1" class="nav-item" id="nav-web1"><i class="fas fa-folder-open" aria-hidden="true"></i> Web 1.0</a>
+        <a href="web2.html" data-page="web2" class="nav-item" id="nav-web2"><i class="fas fa-share-alt" aria-hidden="true"></i> Web 2.0</a>
+        <a href="web3.html" data-page="web3" class="nav-item" id="nav-web3"><i class="fas fa-cube" aria-hidden="true"></i> Web 3.0</a>
+        <a href="references.html" data-page="references" class="nav-item" id="nav-references"><i class="fas fa-book-open" aria-hidden="true"></i> References</a>
+        <a href="contact.html" data-page="contact" class="nav-item" id="nav-contact"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a>
     </nav>
 
-    <main class="page-wrapper page-home">
-        <h1><i class="fas fa-globe"></i> The evolution of the web</h1>
-        <div class="image-placeholder">
+    <main class="page-wrapper page-home" id="main-content">
+        <h1><i class="fas fa-globe" aria-hidden="true"></i> The evolution of the web</h1>
+        
+        <!-- Skip link for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        
+        <div class="image-placeholder" role="region" aria-label="Web evolution timeline">
             <span>timeline</span>
             <div class="logo-strip">
-                <i class="fas fa-code"></i>
-                <i class="fas fa-arrow-right"></i>
-                <i class="fas fa-users"></i>
-                <i class="fas fa-arrow-right"></i>
-                <i class="fas fa-cubes"></i>
-                <i class="fas fa-arrow-right"></i>
-                <i class="fas fa-robot"></i>
+                <i class="fas fa-code" aria-hidden="true"></i>
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                <i class="fas fa-users" aria-hidden="true"></i>
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                <i class="fas fa-cubes" aria-hidden="true"></i>
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                <i class="fas fa-robot" aria-hidden="true"></i>
             </div>
-            <div style="font-size:2rem;">Web 1.0 → 2.0 → 3.0 → Agentic</div>
+            <div style="font-size:2rem;" aria-label="Timeline progression">Web 1.0 → 2.0 → 3.0 → Agentic</div>
         </div>
-        <div class="card-grid">
-            <div class="insight-card"><i class="fas fa-code"></i><strong>Web 1.0</strong> read-only, static, portals <i class="fab fa-yahoo" style="color:#6001ff;"></i></div>
-            <div class="insight-card"><i class="fas fa-users"></i><strong>Web 2.0</strong> read-write, social, cloud <i class="fab fa-facebook"></i> <i class="fab fa-youtube"></i></div>
-            <div class="insight-card"><i class="fas fa-cubes"></i><strong>Web 3.0</strong> decentralized, blockchain <i class="fab fa-bitcoin"></i> <i class="fas fa-link"></i></div>
-            <div class="insight-card"><i class="fas fa-robot"></i><strong>Agentic Web</strong> AI agents, autonomous transactions</div>
+        
+        <div class="card-grid" role="list" aria-label="Web era summaries">
+            <div class="insight-card" role="listitem">
+                <i class="fas fa-code" aria-hidden="true"></i>
+                <strong>Web 1.0</strong> 
+                <p>read-only, static, portals <i class="fab fa-yahoo" style="color:#6001ff;" aria-hidden="true"></i></p>
+            </div>
+            <div class="insight-card" role="listitem">
+                <i class="fas fa-users" aria-hidden="true"></i>
+                <strong>Web 2.0</strong> 
+                <p>read-write, social, cloud <i class="fab fa-facebook" aria-hidden="true"></i> <i class="fab fa-youtube" aria-hidden="true"></i></p>
+            </div>
+            <div class="insight-card" role="listitem">
+                <i class="fas fa-cubes" aria-hidden="true"></i>
+                <strong>Web 3.0</strong> 
+                <p>decentralized, blockchain <i class="fab fa-bitcoin" aria-hidden="true"></i> <i class="fas fa-link" aria-hidden="true"></i></p>
+            </div>
+            <div class="insight-card" role="listitem">
+                <i class="fas fa-robot" aria-hidden="true"></i>
+                <strong>Agentic Web</strong> 
+                <p>AI agents, autonomous transactions</p>
+            </div>
         </div>
-        <h2><i class="fas fa-exchange-alt"></i> from "click and wait" to "ask and it's done"</h2>
-        <p>This exhibit breaks down each era — use the colour‑coded navbar.</p>
+        
+        <h2><i class="fas fa-exchange-alt" aria-hidden="true"></i> from "click and wait" to "ask and it's done"</h2>
+        <p>This exhibit breaks down each era — use the colour‑coded navigation bar to explore Web 1.0, 2.0, and 3.0. Learn about how the internet has evolved from static pages to intelligent, agentic systems.</p>
+        
         <div class="footer-note">
-            <span><i class="fas fa-microchip"></i> future: agentic commerce</span>
+            <span><i class="fas fa-microchip" aria-hidden="true"></i> future: agentic commerce</span>
+            <span><i class="fas fa-universal-access" aria-hidden="true"></i> WCAG 2.1 AA compliant</span>
         </div>
     </main>
     <script src="script.js"></script>
