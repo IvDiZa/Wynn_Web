@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #f8fafc;
+    color: #1a2b3e;
+    line-height: 1.5;
+    transition: background-color 0.2s;
+}
+
+/* ----- navigation – each page gives navbar a distinct accent ----- */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1.5rem;
+    padding: 0.9rem 3rem;
+    background: #13293D;
+    border-bottom: 4px solid #306B34;
+    box-shadow: 0 6px 12px rgba(0,20,10,0.08);
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.nav-brand {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-right: 1.2rem;
+    color: #ffffffcc;
+    letter-spacing: -0.02em;
+    border-right: 2px solid #ffffff40;
+    padding-right: 1.8rem;
+}
+
+.nav-brand i {
+    margin-right: 8px;
+    color: #ffd966;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 40px;
+    background: rgba(255,255,255,0.08);
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    backdrop-filter: blur(4px);
+}
+
+.nav-item i {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.nav-item:hover {
+    background: rgba(255,255,255,0.25);
+    border-color: rgba(255,255,255,0.4);
+    transform: translateY(-2px);
+}
+
+.nav-active {
+    background: #FFFFFF;
+    color: #0a3144;
+    font-weight: 600;
+    border: 1px solid #c7dff7;
+    box-shadow: 0 4px 0 #0f5132;
+}
+
+.nav-active i {
+    color: #1F6045;
+}
+
+/* page container – background colour defines which page we're on */
+.page-wrapper {
+    max-width: 1280px;
+    margin: 2.5rem auto;
+    padding: 0 2.5rem 3rem 2.5rem;
+    border-radius: 48px 12px 48px 12px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 25px 40px -18px rgba(0,40,20,0.3);
+}
+
+/* background colours for each page */
+.page-home { background: #F8F9FA; }
+.page-about { background: #E6F0FA; }
+.page-web1 { background: #F3E6D9; }
+.page-web2 { background: #DAEDE2; }
+.page-web3 { background: #E3DAF1; }
+
+/* content elements */
+h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #0e2b3d;
+    border-left: 8px solid #2D6A4F;
+    padding-left: 1.5rem;
+    margin: 1.2rem 0 1.8rem 0;
+}
+
+h1 i {
+    color: #2D6A4F;
+    margin-right: 15px;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 2.2rem 0 1.2rem 0;
+    color: #1A3F4A;
+    border-bottom: 2px solid rgba(45,106,79,0.25);
+    padding-bottom: 0.4rem;
+}
+
+h2 i {
+    margin-right: 12px;
+    color: #306B34;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1B5E3F;
+    margin: 1.8rem 0 1rem;
+}
+
+h3 i {
+    margin-right: 10px;
+    color: #7E5C40;
+}
+
+p {
+    font-size: 1.16rem;
+    margin-bottom: 1.2rem;
+    color: #1f3849;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0 1.5rem;
+}
+
+.insight-card {
+    background: white;
+    padding: 1.8rem 1.5rem;
+    border-radius: 24px;
+    box-shadow: 0 8px 18px -6px rgba(0,32,16,0.15);
+    border: 1px solid rgba(0,0,0,0.04);
+}
+
+.insight-card strong {
+    font-size: 1.3rem;
+    color: #0F4C3A;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.insight-card i {
+    font-size: 2rem;
+    color: #3A6B4F;
+    margin-bottom: 12px;
+}
+
+.image-placeholder {
+    background: #ffffffc0;
+    border: 2px dashed #3A6B4F;
+    border-radius: 28px;
+    padding: 2rem 2rem;
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #274936;
+    box-shadow: inset 0 0 0 2px #f9f9f9;
+}
+
+.image-placeholder span {
+    background: #1A3F44;
+    color: white;
+    padding: 0.2rem 1.2rem;
+    border-radius: 40px;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.image-placeholder i {
+    font-size: 3rem;
+    margin: 0 15px;
+    color: #2D6A4F;
+}
+
+.logo-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 1.5rem 0;
+    font-size: 2.8rem;
+    color: #1A3F4A;
+}
+
+.logo-strip i {
+    transition: transform 0.2s;
+}
+
+.logo-strip i:hover {
+    transform: scale(1.1);
+    color: #000;
+}
+
+.semantic-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(3px);
+    padding: 2rem;
+    border-radius: 40px;
+    margin: 2.5rem 0;
+    align-items: center;
+}
+
+.ref-links {
+    list-style: none;
+    background: #1E2F40;
+    padding: 2rem;
+    border-radius: 32px;
+    color: white;
+}
+
+.ref-links li {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    border-bottom: 1px dotted #8da9b3;
+    padding-bottom: 0.5rem;
+}
+
+.ref-links li i {
+    margin-right: 15px;
+    width: 28px;
+    color: #FFD966;
+}
+
+.ref-links a {
+    color: #FFD966;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.ref-links a:hover {
+    text-decoration: underline;
+}
+
+/* footer */
+.footer-note {
+    margin-top: 3.5rem;
+    font-size: 0.95rem;
+    color: #2D5146;
+    border-top: 1px solid #AEC3B0;
+    padding-top: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* navbar background variants */
+body.home-nav .navbar { background: #13293D; border-bottom-color: #306B34; }
+body.about-nav .navbar { background: #14455B; border-bottom-color: #527BAE; }
+body.web1-nav .navbar { background: #7E5C40; border-bottom-color: #B47C5E; }
+body.web2-nav .navbar { background: #1F6045; border-bottom-color: #79B791; }
+body.web3-nav .navbar { background: #4C3B63; border-bottom-color: #9D85B2; }
+
+@media (max-width: 700px) {
+    .navbar { padding: 0.8rem 1.5rem; }
+    .page-wrapper { padding: 0 1.5rem 2rem 1.5rem; }
+    h1 { font-size: 2.2rem; }
+}
