@@ -12,6 +12,25 @@ body {
     transition: background-color 0.2s;
 }
 
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: #13293D;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 0 0 8px 8px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    outline: 3px solid #FFD966;
+}
+
 /* ----- navigation – each page gives navbar a distinct accent ----- */
 .navbar {
     display: flex;
@@ -64,6 +83,11 @@ body {
     transform: translateY(-2px);
 }
 
+.nav-item:focus {
+    outline: 3px solid #FFD966;
+    outline-offset: 2px;
+}
+
 .nav-active {
     background: #FFFFFF;
     color: #0a3144;
@@ -92,6 +116,8 @@ body {
 .page-web1 { background: #F3E6D9; }
 .page-web2 { background: #DAEDE2; }
 .page-web3 { background: #E3DAF1; }
+.page-references { background: #F0EAD6; }
+.page-contact { background: #D4E6F1; }
 
 /* content elements */
 h1 {
@@ -155,6 +181,12 @@ p {
     border-radius: 24px;
     box-shadow: 0 8px 18px -6px rgba(0,32,16,0.15);
     border: 1px solid rgba(0,0,0,0.04);
+    transition: transform 0.2s;
+}
+
+.insight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -8px rgba(0,32,16,0.2);
 }
 
 .insight-card strong {
@@ -261,6 +293,254 @@ p {
     text-decoration: underline;
 }
 
+/* References page styles */
+.references-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ref-card {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 24px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-left: 6px solid #2D6A4F;
+}
+
+.ref-card h3 {
+    margin-top: 0;
+    color: #0e2b3d;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+.ref-card ul {
+    list-style-type: none;
+    padding-left: 1.2rem;
+}
+
+.ref-card li {
+    margin: 0.8rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.ref-card li:before {
+    content: "•";
+    color: #2D6A4F;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.ref-note {
+    background: #e8f0e8;
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin: 2rem 0;
+    border: 1px solid #2D6A4F;
+}
+
+/* Contact form styles */
+.contact-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 32px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.feedback-form fieldset {
+    border: 1px solid #cbd5e0;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.feedback-form legend {
+    font-weight: 600;
+    color: #1A3F4A;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #1f3849;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #306B34;
+    box-shadow: 0 0 0 3px rgba(48,107,52,0.1);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+    border-color: #dc2626;
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+    min-height: 1.4rem;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.checkbox-group label {
+    display: inline;
+    margin-bottom: 0;
+}
+
+.rating-group {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.rating-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.rating-option {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.rating-option input[type="radio"] {
+    width: auto;
+    margin-right: 0.3rem;
+}
+
+.rating-option label {
+    display: inline;
+    margin-bottom: 0;
+}
+
+.submit-btn, .reset-btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-right: 1rem;
+}
+
+.submit-btn {
+    background: #306B34;
+    color: white;
+}
+
+.submit-btn:hover {
+    background: #1f4f23;
+    transform: translateY(-2px);
+}
+
+.submit-btn:focus, .reset-btn:focus {
+    outline: 3px solid #FFD966;
+    outline-offset: 2px;
+}
+
+.reset-btn {
+    background: #e2e8f0;
+    color: #1f3849;
+}
+
+.reset-btn:hover {
+    background: #cbd5e0;
+    transform: translateY(-2px);
+}
+
+.form-success {
+    background: #DAEDE2;
+    padding: 2rem;
+    border-radius: 24px;
+    text-align: center;
+    margin: 2rem 0;
+    border: 2px solid #306B34;
+}
+
+.form-success i {
+    font-size: 4rem;
+    color: #306B34;
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 32px;
+    height: fit-content;
+}
+
+.contact-details {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.contact-details li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.contact-details i {
+    width: 2rem;
+    color: #306B34;
+}
+
+.accessibility-note {
+    background: #e6f0fa;
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-top: 2rem;
+    border-left: 4px solid #306B34;
+}
+
 /* footer */
 .footer-note {
     margin-top: 3.5rem;
@@ -279,9 +559,26 @@ body.about-nav .navbar { background: #14455B; border-bottom-color: #527BAE; }
 body.web1-nav .navbar { background: #7E5C40; border-bottom-color: #B47C5E; }
 body.web2-nav .navbar { background: #1F6045; border-bottom-color: #79B791; }
 body.web3-nav .navbar { background: #4C3B63; border-bottom-color: #9D85B2; }
+body.references-nav .navbar { background: #4A5D5E; border-bottom-color: #B5C9C3; }
+body.contact-nav .navbar { background: #1F5E6B; border-bottom-color: #7AB3C9; }
 
 @media (max-width: 700px) {
     .navbar { padding: 0.8rem 1.5rem; }
     .page-wrapper { padding: 0 1.5rem 2rem 1.5rem; }
     h1 { font-size: 2.2rem; }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .rating-options {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .submit-btn, .reset-btn {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
 }
